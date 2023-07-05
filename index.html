@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Patrícia Santos - Nutricionista</title>
+</head>
+
+<body>
+    <!-- Menu Principal -->
+    <nav id="principal">
+        <div id="menu">
+            <a href="#header-geral">Menu</a>
+            <a href="">Meus Atendimentos</a>
+            <a href="#form">E-book</a>
+        </div>
+        <button><a target="_blank" href="https://api.whatsapp.com/send?phone=5511985209526">Agendar consulta</a> </button>
+    </nav>
+
+    <!-- Seção 1 - Cabeçalho -->
+    <div id="header-geral">
+        <div><img id="logo-nutri" src="./Logo/Cópia de Logo Patrícia.png" alt=""></div>
+        <div id="header-informacoes">
+            <h1 class="tituloEtexto" id="titulo-header">Quer ter hábitos mais saudáveis, <br> mas não sabe como? </h1>
+            <h2 class="tituloEtexto" id="header-texto">Eu posso te ajudar</h2>
+            <h4 id="agendar-consulta">Agende sua consulta</h4>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=5511985209526"><img id="icone-whatsapp"
+                    src="./Icone/whatsapp.png" alt=""> </a>
+        </div>
+        <div>
+            <img id="imagem-header" src="./Imagens/patricia-secao-1.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- Seção 2 - Carrossel -->
+    <div id="carrossel">
+        <div>
+            <img class="seta" id="seta-esquerda" onclick="RolarParaEsquerda()" src="./Icone/seta-esquerda.svg" alt="">
+        </div>
+        <div id="card-gestante" class="cards">
+            <img id="icone-gestante" src="./Icone/gestante.png" alt="">
+            <p id="texto-gestante">Cuidando da saúde e alimentação da mãe e bebê desde a gestação.</p>
+        </div>
+
+        <div id="card-alimento" class="cards">
+            <img id="icone-alimento" src="./Icone/alimento.png" alt="">
+            <p id="texto-alimento">Te ajudo a ter uma alimentação mais saudável.</p>
+        </div>
+
+        <div id="card-menteEsaude" class="cards">
+            <img id="icone-menteEsaude" src="./Icone/mente-saude.png" alt="">
+            <p id="texto-menteEsaude">Me preocupo com o bem estar da sua saúde, mas também da sua mente.</p>
+        </div>
+
+        <div id="card-mulher" class="cards">
+            <img id="icone-mulher" src="./Icone/mulher.png" alt="">
+            <p  id="texto-mulher">Cuidando da saúde da mulher,em todas as fases da vida.</p>
+        </div>
+        <div>
+            <img class="seta" id="seta-direita" onclick="RolarParaDireita()" src="./Icone/seta-direita.svg" alt="">
+        </div>
+    </div>
+
+    <!-- ATENDIMENTOS -->
+    <div>
+        
+    </div>
+
+
+    <!-- FORMULÁRIO -->
+    <div>
+        <h1 id="title-form">Preencha o formulário e baixe o seu e-book</h1>
+        <h3 id="text-form">Novos hábitos começam com uma cozinha prática!</h3>
+    </div>
+    <div id="form">
+        <form action="https://api.sheetmonkey.io/form/puGXkPeqafc69gJY4RVKJW" method="post">
+            <input type="text" placeholder="Nome" name="Name" required /> <br><br>
+            <input type="email" placeholder="Email" name="Email" required /> <br><br>
+            <input type="number" placeholder="Telefone" name="Phone" required> <br> <br>
+            <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+            <button id="button-form" type="submit"> Quero o meu ebook</button>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

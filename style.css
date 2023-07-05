@@ -1,0 +1,220 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+}
+
+#principal{
+    height: 70%;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#menu{
+    width: 25%;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#menu a{
+    text-decoration: none;
+    color:black;
+}
+
+
+nav button {
+    margin-right: 90px;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1);
+    cursor: pointer;
+}
+
+nav button a{
+    text-decoration: none;
+    color: #ac3185;
+    font-weight: 700;
+}
+
+#header-geral {
+    display: grid;
+    grid-auto-flow: column;
+    columns: auto;
+    margin-top: 25px;
+    color: #ac3185
+}
+
+#logo-nutri {
+    width: 280px;
+    height: 180px;
+    margin-left: 65px;
+    margin-top: 85px;
+}
+
+#header-informacoes {
+    margin-left: 25px;
+}
+
+#header-texto {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.tituloEtexto {
+    margin-top: 70px;
+    text-align: center;
+    margin-left: 45px;
+}
+
+#agendar-consulta {
+    margin-top: 40px;
+    margin-left: 275px;
+}
+
+#icone-whatsapp {
+    width: 40px;
+    height: 40px;
+    margin-left: 345px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#imagem-header {
+    width: 240px;
+    margin-left: 270px;
+    border-radius: 5px;
+}
+
+#carrossel {
+    background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1, #eeb7dd, #ffacbd);
+    display: grid;
+    grid-auto-flow: column;
+    columns: auto;
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 430px;
+    height: 150px;
+    border-radius: 25px;
+    margin-top: 35px;
+    margin-left: 40px;
+    margin-bottom: 35px;
+}
+
+#icone-gestante {
+    width: 120px;
+    border-radius: 5px;
+}
+
+#texto-gestante {
+    border-radius: 5px;
+}
+
+#icone-alimento {
+    width: 120px;
+    border-radius: 5px;
+}
+
+#texto-alimento {
+    border-radius: 5px;
+}
+
+#icone-menteEsaude {
+    width: 120px;
+    border-radius: 5px;
+}
+
+#texto-menteEsaude {
+    border-radius: 5px;
+}
+
+#icone-mulher {
+    width: 120px;
+    border-radius: 5px;
+    
+}
+
+#texto-mulher {
+    border-radius: 5px;
+}
+
+#card-mulher{
+    display: none;
+}
+
+#seta-direita{
+    margin-top: 90px;
+    cursor: pointer;
+    }
+
+#seta-esquerda{
+    margin-top: 90px;
+    cursor: pointer;
+    margin-left: 45px;
+    display: none;
+}
+
+.seta:hover{
+    transform:translateY(-7px);
+    transition-duration: o.5s;
+}
+
+#title-form{
+    text-align: center;
+    margin-top: 35px;
+    color: #ac3185;
+
+}
+
+#text-form{
+    text-align: center;
+    margin-top: 15px;
+    color: #ac3185;
+}
+
+#form{
+    margin-top: 35px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input {
+    width: 370px;
+    height: 35px;
+    padding-left: 10px;
+}
+
+button{
+    width: 160px;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 75px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1);
+    color: #ac3185;
+    font-weight: 700;
+}
+
+#button-form:hover{
+    background-color:#ac3185 ;
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 15px #db77bb;
+    transition-duration: 0.5s;
+}
