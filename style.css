@@ -237,3 +237,90 @@ input {
     margin-bottom: 95px;
     color: black;
 }
+
+@media only screen and (max-width: 600px){ 
+
+    /* Menu Principal */
+    #principal{
+        flex-direction: column;
+        height: auto; 
+    }
+
+    #menu{
+        flex-direction: column;
+        width: 70%;
+    }
+
+    #menu a{
+        display: flex;
+        justify-content:center;
+        padding: 5px;
+    }
+
+    #principal button{
+        width: 70%;
+        margin-bottom: 0px;
+    }
+
+
+    /* Seção 1 - Cabeçalho */
+    #header-geral{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+    }
+    #logo-nutri{
+        width: 180px;
+        height: 130px;
+        margin: 0px;
+        margin-top: 0px;
+        align-items: center;
+    }
+
+    #header-geral{
+        margin-right: 25px;
+    }
+
+    #header-informacoes{
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    #header-geral h1{
+        margin: 0px;
+        padding-right: 25px;
+        font-size: 18px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #header-geral h2{
+        margin: 0px;
+        font-size: 14px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #header-geral h4{
+        margin: 0px;
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    #icone-whatsapp{
+        margin: 0px;
+        height: 30px;
+        width: 30px;
+        margin-bottom: 15px;
+    }
+
+    #imagem-header{
+        margin: 0px;
+        width: 150px;
+    }
+
+/* Seção 2 - Carrossel */
+ 
+}
