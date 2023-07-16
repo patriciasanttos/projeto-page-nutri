@@ -244,22 +244,31 @@ input {
     #principal{
         flex-direction: column;
         height: auto; 
+        padding: 0px;
+        align-items: center;
+        margin-bottom: 15px;
     }
 
     #menu{
         flex-direction: column;
-        width: 70%;
+        width: 90%;
+        margin: 0px;
+        padding: 0px;
     }
 
     #menu a{
         display: flex;
         justify-content:center;
         padding: 5px;
+        margin: 0px;
+        font-size: 25px;
+        margin-right: 35px;
     }
 
     #principal button{
         width: 70%;
-        margin-bottom: 0px;
+        font-size: 18px;
+        margin-left: 40px;
     }
 
 
@@ -271,8 +280,8 @@ input {
         margin: 0px;
     }
     #logo-nutri{
-        width: 180px;
-        height: 130px;
+        width: 220px;
+        height: 140px;
         margin: 0px;
         margin-top: 0px;
         align-items: center;
@@ -322,5 +331,82 @@ input {
     }
 
 /* Seção 2 - Carrossel */
- 
+    .cards{
+        width: 300px;
+        justify-content:start;
+        margin-left: 30px;
+    }
+
+    #card-gestante{
+        margin-right: 115px;
+    }
+
+    #texto-gestante{
+        width: 55%;
+    }
+
+    #card-alimento{
+        margin-right: 115px;
+        display: none;
+    }
+
+    #texto-alimento{
+        width: 55%;
+    }
+
+    #card-menteEsaude{
+        margin-right: 115px;
+        display: none;
+    }
+
+    #texto-menteEsaude{
+        width: 55%;
+    }
+
+    #card-mulher{
+        margin-right: 115px;
+    }
+
+    #texto-mulher{
+        width: 55%;
+    }
+
+   
+/* ATENDIMENTOS */
+    #atendimentos-principal{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 25px;
+        font-size: 15px;
+    }
+
+    #atendimentos{
+        display: flex;
+        flex-direction: column;
+        margin-right: 25px;
+    }
+
+    #atendimentos p{
+        padding: 10px;
+    }
+
+/* FORMULÁRIO     */
+    #title-form{
+        font-size: 25px;
+        width: 65%;
+        margin-left: 60px;
+    }
+
+    #text-form{
+        width: 65%;
+        margin-left: 60px;
+    }
+
+    input{
+        align-items: center;
+        width: 70%;
+    }
+
+
 }
