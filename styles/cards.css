@@ -1,0 +1,36 @@
+#cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    text-align: center;
+    margin-right: 6%;
+    margin-left: 6%;
+
+    height: 380px;
+
+}
+
+.card-cir {
+    width: 30%;
+    height: 330px;
+
+    border-radius: 10px;
+    border: 1px solid #ac3185;
+    box-shadow: -18px 15px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.texto-card {
+    padding-top: 15px;
+
+    color: #ac3185;
+    font-size: 14pt;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.card-cir:hover {
+    transform:translate(10px);
+    transition-duration: 0.5s;
+}
