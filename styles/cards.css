@@ -13,7 +13,7 @@
 }
 
 .card-cir {
-    width: 30%;
+    width: 22%;
     height: 330px;
 
     border-radius: 10px;
@@ -23,6 +23,7 @@
 
 .texto-card {
     padding-top: 15px;
+    padding: 5px;
 
     color: #ac3185;
     font-size: 14pt;
@@ -31,6 +32,6 @@
 }
 
 .card-cir:hover {
-    transform:translate(10px);
+    transform:translateY(-10px);
     transition-duration: 0.5s;
 }

@@ -12,6 +12,11 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    width: 90%;
     max-width: 1920px;
 }
 
@@ -69,6 +74,7 @@ body {
     justify-content: space-between;
     background-image: linear-gradient(to right, #f6ebf0, #f4ecf5, #f0eefa, #eaf1fe, #e4f4ff);
     align-items: center;
+    margin-top: 140px;
     max-width: 1920px;
 }
 
