@@ -59,7 +59,7 @@
     width: 45%;
 }
 
-#responder button{
+#buttonResponder{
     margin-top: 35px;
     padding: 15px;
     cursor: pointer;
@@ -69,8 +69,12 @@
     background-color: white;
 }
 
-#responder button:hover {
+#buttonResponder:hover {
     background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1);
     transform: translateY(-8px);
     transition-duration: 0.5s;
+}
+
+.selecionado {
+    background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1);
 }
