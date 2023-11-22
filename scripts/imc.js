@@ -38,7 +38,6 @@ function setGenero(sexo) {
 
         document.getElementById('texto-gestante').style.display = 'flex'
         document.getElementById("gestante").style.display = "flex";
-        document.getElementById("peso-pre").style.display = "flex";
     }
 }
 
@@ -59,9 +58,13 @@ function setGestante(isGestante) {
     if (isGestante) {
         toggleButtonById("gestante-ok", true);
         toggleButtonById("nao-gestante", false);
+
+        document.getElementById("peso-pre").style.display = "flex";
     } else {
         toggleButtonById("nao-gestante", true);
         toggleButtonById("gestante-ok", false);
+
+        document.getElementById("peso-pre").style.display = "none";
     }
 }
 
