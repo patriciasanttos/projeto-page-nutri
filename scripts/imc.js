@@ -27,9 +27,18 @@ function setGenero(sexo) {
     if (genero == 'm') {
         toggleButtonById("masculino", true);
         toggleButtonById('feminino', false)
+
+        document.getElementById("texto-gestante").style.display = "none";
+        document.getElementById('gestante').style.display = 'none'
+        document.getElementById("peso-pre").style.display = "none";
+
     } else {
         toggleButtonById("feminino", true);
         toggleButtonById('masculino', false)
+
+        document.getElementById('texto-gestante').style.display = 'flex'
+        document.getElementById("gestante").style.display = "flex";
+        document.getElementById("peso-pre").style.display = "flex";
     }
 }
 
@@ -70,12 +79,8 @@ function responder() {
     let altura = document.getElementById('altura').value
     let calculo = peso/altura/altura
     let resultado = calculo.toFixed(2)
-    alert(genero)
-    alert(idade)
-    alert(gestante)
-    alert(peso)
-    alert(altura)
-    alert(resultado);
+    
+    //Se
 }
 
 

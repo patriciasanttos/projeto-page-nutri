@@ -49,6 +49,10 @@
     cursor: pointer;
 }
 
+#texto-gestante {
+    justify-content: center;
+}
+
 #peso-altura input {
     border: 1px solid #ac3185;
     border-radius: 5px;
@@ -57,6 +61,12 @@
     padding: 10px;
     margin-top: 15px;
     width: 45%;
+}
+
+#peso-pre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #buttonResponder{

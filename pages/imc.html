@@ -57,8 +57,8 @@
             </div>
         </div>
 
-        <h2>Está gestante?</h2>
-        <div id="gestante" class="select">
+            <h2 style="display:none" id="texto-gestante">Está gestante?</h2>
+        <div id="gestante" class="select" style="display:none">
             <div class="gestante-ou-nao option" id="gestante-ok">
                 <h4>Sim</h4>
             </div>
@@ -72,6 +72,11 @@
         <div id="peso-altura" class="select">
             <div>
                 <h4>Peso</h4>
+                <input type="number" name="" id="peso" placeholder="00.00">
+            </div>
+
+            <div id="peso-pre" style="display:none">
+                <h4>Peso (pré-gestacional)</h4>
                 <input type="number" name="" id="peso" placeholder="00.00">
             </div>
 
@@ -91,6 +96,7 @@
     </section>
 
     <script src="/scripts/imc.js"></script>
+    
 </body>
 
 </html>
