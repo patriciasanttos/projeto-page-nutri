@@ -53,6 +53,10 @@
     justify-content: center;
 }
 
+#texto-gemelar {
+    justify-content: center;
+}
+
 #peso-altura input {
     border: 1px solid #ac3185;
     border-radius: 5px;

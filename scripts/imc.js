@@ -1,6 +1,7 @@
 let genero = null
 let idade = null
 let gestante = null
+let gestanteGemelar = null
 
 function toggleButtonById(id, isOn) {
     // Pega o elemento pelo id (botao que a gente quer)
@@ -59,12 +60,27 @@ function setGestante(isGestante) {
         toggleButtonById("gestante-ok", true);
         toggleButtonById("nao-gestante", false);
 
+        document.getElementById('texto-gemelar').style.display = 'flex'
+        document.getElementById("gestante-gemelar").style.display = "flex";
         document.getElementById("peso-pre").style.display = "flex";
     } else {
         toggleButtonById("nao-gestante", true);
         toggleButtonById("gestante-ok", false);
 
+        document.getElementById("texto-gemelar").style.display = "none";
+        document.getElementById("gestante-gemelar").style.display = "none";
         document.getElementById("peso-pre").style.display = "none";
+    }
+}
+
+function setGestanteGemelar(isGemelar) {
+    gestanteGemelar = isGemelar
+    if (isGemelar) {
+        toggleButtonById('gemeos', true);
+        toggleButtonById('nao-gemeos', false)
+    } else {
+        toggleButtonById("nao-gemeos", true);
+        toggleButtonById("gemeos", false);
     }
 }
 
@@ -75,6 +91,9 @@ document.getElementById('adulto').addEventListener('click', () => setIdade('adul
 document.getElementById("idoso").addEventListener("click", () => setIdade("idoso"));
 document.getElementById('gestante-ok').addEventListener('click', () => setGestante(true))
 document.getElementById('nao-gestante').addEventListener('click', () => setGestante(false))
+document.getElementById('gemeos').addEventListener('click', () => setGestanteGemelar(true))
+document.getElementById("nao-gemeos").addEventListener("click", () => setGestanteGemelar(false));
+
 
 
 function responder() {
