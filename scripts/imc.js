@@ -110,8 +110,21 @@ document
 function responder() {
   let peso = document.getElementById("peso").value;
   let altura = document.getElementById("altura").value;
-  let calculo = peso / altura / altura;
-  let resultado = calculo.toFixed(2);
+
+  let calculo1 = peso / altura / altura;
+  let resultado = calculo1.toFixed(2);
+
+  let pesoPreGest = document.getElementById('peso-pre-gest').value 
+  let calculo2 = peso - pesoPreGest
+
+  let baixoPesoGestMin = 12.5 - calculo2 
+  let baixoPesoGestMax = 18 - calculo2 
+  let eutrofPesoGestMin = 11.5 - calculo2 
+  let eutrofPesoGestMax = 16 - calculo2 
+  let sobrePesoGestMin = 7 - calculo2
+  let sobrePesoGestMax = 11.5 - calculo2
+  let obesPesoGestMin = 5 - calculo2
+  let obesPesoGestMax = 9 - calculo2;
 
   if (
     genero == null ||
@@ -120,7 +133,7 @@ function responder() {
     altura == 0 ||
     altura < 1.45
   ) {
-    alert("Por favor, preencha os dados!");
+    alert("Por favor, verifique os dados preenchidos!");
   } else if (idade == "adulto") {
     if (resultado < 18.5) {
       console.log("Seu IMC adulto é de baixo peso");
@@ -130,6 +143,19 @@ function responder() {
       console.log("Seu imc adulto é sobrepeso / pré-obesidade");
     } else if (resultado >= 30 && resultado < 35) {
       console.log("Seu imc adulto obesidade grau I");
+    } 
+    
+    if (
+      genero == "f" &&
+      idade == "adulto" &&
+      gestante == null &&
+      gestanteGemelar == null
+    ) {
+      alert("Por favor, verifique os dados preenchidos!");
+    } else if (gestante == "gestante-ok" && resultado < 18.5) {
+      console.log(
+        `Seu peso pré-gestacional teve um IMC de baixo peso, você pode ganhar entre ${baixoPesoGestMin} à ${baixoPesoGestMax}`
+      );
     }
   }
 
@@ -143,8 +169,10 @@ function responder() {
     } else if (resultado >= 30) {
       console.log("Seu imc idoso é obesidade");
     }
+
   }
   console.log(resultado);
+  console.log(calculo2, baixoPesoGestMin, baixoPesoGestMax)
 }
 
 document.getElementById("buttonResponder").addEventListener("click", responder);
