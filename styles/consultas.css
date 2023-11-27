@@ -20,8 +20,15 @@
 
 .info-consultas {
     width: 25%;
+    height: 170px;
+    margin: 0px 20px;
 }
 
 .texto-consultas {
     padding-top: 10px;    
 }
+
+.img-consultas {
+    height: 70px;
+}
+
