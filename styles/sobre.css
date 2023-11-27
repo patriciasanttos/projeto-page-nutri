@@ -29,8 +29,9 @@ section {
     width: 65%;
     margin: auto;
 
-    font-weight: 600;
+    font-weight: 500;
     line-height: 30px;
+    color: #ac3185;
 }
 
 section img {
