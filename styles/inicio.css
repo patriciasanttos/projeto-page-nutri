@@ -71,31 +71,29 @@ body {
 }
 
 #info-nutri {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     background-image: linear-gradient(to right, #f6ebf0, #f4ecf5, #f0eefa, #eaf1fe, #e4f4ff);
-    align-items: center;
+
     margin-top: 140px;
+    height: 120px;
     max-width: 1920px;
+}
+
+.titulo-texto-info {
+    text-align: center;
+    align-items: center;
 }
 
 #titulo-info {
     font-weight: 600;
-    text-align: left;
     color: #ac3185;
 }
 
 #texto-info {
     padding-top: 25px;
     font-weight: 600;
-    text-align: left;
     color: #ac3185;
 }
 
-#foto-info {
-    border-radius: 10px;
-}
 
 @media (max-width: 600px) {
     #menu-superior { padding: 0px 10px; }
