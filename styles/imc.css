@@ -4,7 +4,6 @@
 
 #div-imc {
     width: 50%;
-    height: 830px;
     text-align: center;
     margin: auto;
     margin-top: 150px;
@@ -91,4 +90,15 @@
 
 .selecionado {
     background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1);
+}
+
+#resultado {
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px 10px 20px 10px;
+    border-radius: 5px;
+
+    width: 80%;
+
+    font-weight: 600;
 }

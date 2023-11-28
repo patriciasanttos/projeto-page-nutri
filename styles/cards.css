@@ -7,7 +7,7 @@
     text-align: center;
     margin-right: 6%;
     margin-left: 6%;
-    margin-top: 20px;
+    margin-top: 80px;
 
     height: 380px;
 
@@ -15,16 +15,19 @@
 
 .card-cir {
     width: 22%;
-    height: 330px;
+    height: 280px;
 
     border-radius: 10px;
     border: 1px solid #ac3185;
     box-shadow: -18px 15px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+.card-cir img {
+    margin-top: -70px;
+}
+
 .texto-card {
-    padding-top: 15px;
-    padding: 5px;
+    padding: 15px 5px 10px 5px;
 
     color: #ac3185;
     font-size: 14pt;
