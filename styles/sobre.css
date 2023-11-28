@@ -28,10 +28,10 @@ section {
 #sobre-mim h3 {
     width: 65%;
     margin: auto;
+    text-align: left;
 
     font-weight: 500;
     line-height: 30px;
-    color: #ac3185;
 }
 
 section img {
