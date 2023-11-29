@@ -39,7 +39,7 @@ section img {
     margin-right: 80px;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     #sobre-mim {
         display: flex;
         flex-direction: column;
@@ -54,4 +54,23 @@ section img {
         width: 350px;
         margin: auto;
     }
+}
+
+@media only screen and (min-width: 600px) {
+    #sobre-mim {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sobre-mim h3 {
+        width: 80%;
+        padding-bottom: 25px;
+        font-size: 16pt;
+    }
+
+    #sobre-mim img {
+        width: 380px;
+        margin: auto;
+    }
+
 }

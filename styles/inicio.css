@@ -47,21 +47,25 @@ body {
     }
 
     #texto-info {
-        font-size: 18pt;
+        font-size: 15pt;
     }
 }
 
 @media only screen and (min-width: 600px) {
+    #menu-superior {
+        z-index: 1;
+    }
+
     #info-nutri {
         padding: 20px 10px;
     }
 
     #titulo-info {
-        font-size: 16pt;
+        font-size: 18pt;
     }
 
     #texto-info {
-        font-size: 18pt;
+        font-size: 17pt;
     }
 }
 

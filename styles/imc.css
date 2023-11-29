@@ -3,7 +3,7 @@
 }
 
 #div-imc {
-    width: 50%;
+    width: 55%;
     text-align: center;
     margin: auto;
     margin-top: 150px;
@@ -103,9 +103,11 @@
     font-weight: 600;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     #div-imc {
-        width: 82%;
+        width: 90%;
+
+        padding: 0px;
     }
 
     #div-imc h1 {
@@ -121,4 +123,65 @@
         width: 30%;
     }
 
+    #peso-altura {
+        font-size: 9.9pt;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    #div-imc {
+        width: 88%;
+    }
+
+    #div-imc h1 {
+        font-size: 24pt;
+    }
+
+    #div-imc h2 {
+        font-size: 18pt;
+    }
+
+    .option {
+        font-size: 12pt;
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 982px) {
+    #div-imc {
+        width: 70%;
+    }
+
+    #div-imc h1 {
+        font-size: 24pt;
+    }
+
+    #div-imc h2 {
+        font-size: 18pt;
+    }
+
+    .option {
+        font-size: 12pt;
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 982px) and (max-width: 1130px) {
+    #div-imc {
+        width: 60%;
+    }
+
+    #div-imc h1 {
+        font-size: 24pt;
+    }
+
+    #div-imc h2 {
+        font-size: 18pt;
+    }
+
+    .option {
+        font-size: 12pt;
+        width: 30%;
+    }
 }
