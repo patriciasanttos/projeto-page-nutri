@@ -38,3 +38,20 @@ section img {
     border-radius: 10px;
     margin-right: 80px;
 }
+
+@media (max-width: 600px) {
+    #sobre-mim {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sobre-mim h3 {
+        width: 80%;
+        padding-bottom: 25px;
+    }
+
+    #sobre-mim img {
+        width: 350px;
+        margin: auto;
+    }
+}

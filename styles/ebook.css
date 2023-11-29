@@ -55,3 +55,24 @@ input {
     transform: translateY(-8px);
     transition-duration: 0.5s;
 }
+
+@media (max-width: 600px) {
+    section {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 40px;
+    }
+
+    section img {
+        width: 320px;
+    }
+
+    section h1 {
+        font-size: 20pt;
+    }
+
+    section input {
+        width: 300px;
+    }
+}

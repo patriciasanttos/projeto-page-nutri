@@ -39,3 +39,32 @@
     transform:translateY(-10px);
     transition-duration: 0.5s;
 }
+
+@media (max-width: 600px) {
+ .scrolling {
+     flex-wrap: nowrap;
+     overflow-x: auto;
+
+ }
+
+ .card-cir {
+     flex: 0 0 auto;
+     width: 70%;
+
+ }
+
+ #cards {
+    gap: 10%;
+    margin-right: 10px;
+ }
+
+ .card-cir img {
+     width: 140px;
+     position: relative;
+     top: 5px;
+ }
+
+ .texto-card {
+     padding-right: 20px;
+ }
+}
