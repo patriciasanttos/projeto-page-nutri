@@ -121,7 +121,7 @@ function responder() {
 
   let pesoPreGest = document.getElementById("peso-pre-gest").value;
   let calculo2 = peso - pesoPreGest;
-  let resultado2 = pesoPreGest / altura / altura
+  let resultado2 = pesoPreGest / altura / altura;
 
   let baixoPesoGestMin = 12.5 - calculo2;
   let baixoPesoGestMax = 18 - calculo2;
@@ -141,32 +141,46 @@ function responder() {
 
   //IMC para Adultos
   function calculoAdulto() {
-    if (resultado < 18.5) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Desnutrido (a). Atenção! Vamos cuidar da alimentação?";
+    if (
+      genero == null ||
+      idade == null ||
+      peso == 0 ||
+      altura == 0 ||
+      altura < 1.45
+    ) {
+      alert("Por favor, verifique os dados preenchidos!");
+    } else if (resultado < 18.5) {
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Desnutrido (a). Atenção! Vamos cuidar da alimentação?`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
     } else if (resultado >= 18.5 && resultado < 25) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Eutrófico (a). Você está num bom caminho! Posso te ajudar a continuar cuidando da sua alimentação.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Eutrófico (a). Você está num bom caminho! Posso te ajudar a continuar cuidando da sua alimentação.`;
       document.getElementById("resultado").style.border = styleEutrofico;
     } else if (resultado >= 25 && resultado < 30) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Sobrepeso. Atenção! Posso te ajudar a fazer uma reeducação alimentar.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Sobrepeso. Atenção! Posso te ajudar a fazer uma reeducação alimentar.`;
       document.getElementById("resultado").style.border = styleSobrePeso;
     } else if (resultado >= 30 && resultado < 35) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Obesidade grau I. Atenção! Posso te ajudar a fazer uma reeducação alimentar e melhorar alguns sintomas que surgem decorrente da obesidade.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Obesidade grau I. Atenção! Posso te ajudar a fazer uma reeducação alimentar e melhorar alguns sintomas que surgem decorrente da obesidade.`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
     } else if (resultado >= 35 && resultado < 40) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Obesidade grau II. Atenção! Posso te ajudar a fazer uma reeducação alimentar e melhorar alguns sintomas que surgem decorrente da obesidade.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Obesidade grau II. Atenção! Posso te ajudar a fazer uma reeducação alimentar e melhorar alguns sintomas que surgem decorrente da obesidade.`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
     } else if (resultado >= 40) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Obesidade grau III. Atenção! Posso te ajudar a fazer uma reeducação alimentar e melhorar alguns sintomas que surgem decorrente da obesidade.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Obesidade grau III. Atenção! Posso te ajudar a fazer uma reeducação alimentar e melhorar alguns sintomas que surgem decorrente da obesidade.`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
     }
@@ -174,7 +188,15 @@ function responder() {
 
   //IMC para Idosos
   function calculoIdoso() {
-    if (resultado < 23) {
+    if (
+      genero == null ||
+      idade == null ||
+      peso == 0 ||
+      altura == 0 ||
+      altura < 1.45
+    ) {
+      alert("Por favor, verifique os dados preenchidos!");
+    } else if (resultado < 23) {
       document.getElementById("resultado").innerHTML =
         "O seu estado nutricional deu: Desnutrido (a). Atenção! É preciso cuidar da alimentação.";
       document.getElementById("resultado").style.border =
@@ -197,12 +219,20 @@ function responder() {
 
   //IMC para Gestantes
   function calculoGestante() {
-    if (resultado2 < 18.5) {
+    if (
+      genero == "f" &&
+      idade == "adulto" &&
+      gestante == null &&
+      gestanteGemelar == null
+    ) {
+      alert("Por favor, verifique os dados preenchidos!");
+    } else if (resultado2 < 18.5) {
       document.getElementById(
         "resultado"
       ).innerHTML = `Seu peso pré-gestacional teve um IMC de baixo peso, você pode ganhar 
         entre ${baixoPesoGestMin}kg à ${baixoPesoGestMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas.`;
-      document.getElementById("resultado").style.border = styleBaixoPesoObesidade;
+      document.getElementById("resultado").style.border =
+        styleBaixoPesoObesidade;
     } else if (resultado2 >= 18.5 && resultado2 < 25) {
       document.getElementById(
         "resultado"
@@ -244,31 +274,17 @@ function responder() {
         "resultado"
       ).innerHTML = `Seu peso pré-gestacional teve um IMC de obesidade, você pode ganhar 
         entre ${obesPesoGemMin}kg à ${obesPesoGemMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas`;
-      document.getElementById("resultado").style.border = styleBaixoPesoObesidade;
+      document.getElementById("resultado").style.border =
+        styleBaixoPesoObesidade;
     }
   }
 
   if (
-    genero == null ||
-    idade == null ||
-    peso == 0 ||
-    altura == 0 ||
-    altura < 1.45
+    pesoPreGest == 0 || gestanteGemelar == null
   ) {
-    alert("Por favor, verifique os dados preenchidos!");
-  }
-  if (
-    genero == "f" &&
-    idade == "adulto" &&
-    gestante == null &&
-    gestanteGemelar == null
-  ) {
-    console.log(">>>> 2");
     alert("Por favor, verifique os dados preenchidos!");
   } else if (idade == "adulto") {
     if (genero == "f" && gestante) {
-      console.log(">>>> 4");
-
       if (!gestanteGemelar) {
         calculoGestante();
       } else {
