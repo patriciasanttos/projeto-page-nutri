@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/Public/Cópia de Logo Patrícia.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/inicio.css">
+    <link rel="stylesheet" href="/styles/ebook.css">
+    <link rel="stylesheet" href="/styles/menu-superior.css">
+    <title>Patrícia Santos - Nutricionista</title>
+</head>
+
+<body>
+    <!-- Menu Superior -->
+    <nav id="menu-superior">
+        <img id="logo" src="/Public/logo-alterada.svg" width="180px" height="140px" alt="">
+        <div id="links-desktop">
+            <div class="links">
+                <a href="/index.html" class="link-superior">Início</a>
+                <a href="/pages/sobre.html" class="link-superior">Sobre mim</a>
+                <a href="/pages/imc.html" class="link-superior">IMC</a>
+                <a href="/pages/ebook.html" class="link-superior">E-book</a>
+                <a href="https://api.whatsapp.com/send?phone=5511985209526" class="link-superior agendar" target="_blank">
+                    Agendar consulta
+                </a>
+            </div>
+        </div>
+
+        <div id="links-mobile">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="/index.html">Início</a>
+                    <a href="/pages/sobre.html" >Sobre mim</a>
+                    <a href="/pages/imc.html">IMC</a>
+                    <a href="/pages/ebook.html" >E-book</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511985209526" target="_blank">
+                        Agendar consulta
+                    </a>
+                </div>
+              </div>
+        </div>
+    </nav>
+
+    <section>
+        <div>
+            <img src="/Public/PRATICIDADE NA COZINHA.svg" width="380px" alt="">
+        </div>
+
+        <div>
+            <h1 id="title-form">Preencha o formulário e baixe o seu e-book</h1>
+            <h3 id="text-form">Novos hábitos começam com uma cozinha prática!</h3>
+            <form action="https://api.sheetmonkey.io/form/puGXkPeqafc69gJY4RVKJW" method="post">
+                <input type="text" placeholder="Nome" name="Name" required /> <br><br>
+                <input type="email" placeholder="Email" name="Email" required /> <br><br>
+                <input type="number" placeholder="Telefone" name="Phone" required> <br> <br>
+                <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+                <button id="button-form" type="submit"> Quero o meu ebook</button>
+            </form>
+        </div>
+    </section>

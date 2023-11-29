@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,80 +8,136 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,200&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/inicio.css">
-    <link rel="stylesheet" href="styles/cards.css">
-    <link rel="shortcut icon" href="Public/Cópia de Logo Patrícia.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/inicio.css">
+    <link rel="stylesheet" href="/styles/cards.css">
+    <link rel="stylesheet" href="/styles/consultas.css">
+    <link rel="stylesheet" href="/styles/menu-superior.css">
+
+    <link rel="shortcut icon" href="/Public/Cópia de Logo Patrícia.png" type="image/x-icon">
     <title>Patrícia Santos - Nutricionista</title>
 </head>
 
 <body>
     <!-- Menu Superior -->
     <nav id="menu-superior">
-        <img src="Public/logo-alterada.svg" width="180px" height="140px" alt="">
-        <div class="links">
-            <a href="" class="link-superior">Sobre mim</a>
-            <a href="" class="link-superior">Atendimentos</a>
-            <a href="" class="link-superior">IMC</a>
-            <a href="" class="link-superior">E-book</a>
-            <a href="https://api.whatsapp.com/send?phone=5511985209526" class="link-superior agendar" target="_blank" >
-                Agendar consulta
-            </a>
+        <img id="logo" src="/Public/logo-alterada.svg" width="180px" height="140px" alt="">
+        <div id="links-desktop">
+            <div class="links">
+                <a href="/pages/sobre.html" class="link-superior">Sobre mim</a>
+                <a href="/pages/imc.html" class="link-superior">IMC</a>
+                <a href="/pages/ebook.html" class="link-superior">E-book</a>
+                <a href="https://api.whatsapp.com/send?phone=5511985209526" class="link-superior agendar" target="_blank">
+                    Agendar consulta
+                </a>
+            </div>
         </div>
-        
+
+        <div id="links-mobile">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="/pages/sobre.html" >Sobre mim</a>
+                    <a href="/pages/imc.html">IMC</a>
+                    <a href="/pages/ebook.html" >E-book</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511985209526" target="_blank">
+                        Agendar consulta
+                    </a>
+                </div>
+              </div>
+        </div>
     </nav>
 
+    <!-- Info Nutri -->
     <section>
         <div id="info-nutri">
-            <div>
-                <h1 id="titulo-info">
-                    Quer mudar os seus hábitos alimentares, 
+                <h1 id="titulo-info" class="titulo-texto-info">
+                    Quer mudar os seus hábitos alimentares,
                     <br>mas não sabe como?
                 </h1>
-                <h2 id="texto-info">
+                <h2 id="texto-info" class="titulo-texto-info">
                     Eu posso te ajudar!
-                </h2>
-            </div>
-            <div>
-                <img id="foto-info" src="Public/patricia-secao-1.jpg" width="270px" alt="">
-            </div>
+                </h2>          
         </div>
     </section>
 
+    <!-- Cards -->
     <section>
         <div id="cards">
             <div class="card-cir">
-                <img src="Public/gestante-circ.svg" width="140px" alt="">
+                <img src="Public/gestante-cir.png" width="160px" alt="">
                 <h3 class="texto-card">
-                    Te ajudo a cuidar da sua alimentação desde o <br>início da gestação, garantindo uma saúde <br>adequada para mãe e bebê.
+                    Te ajudo a cuidar da sua alimentação desde o início da gestação, garantindo uma saúde adequada para
+                    mãe e bebê.
                 </h3>
             </div>
 
             <div class="card-cir">
-                <img src="Public/alimento-circ.svg" width="140px" alt="">
+                <img src="Public/alimento-cir.png" width="160px" alt="">
                 <h3 class="texto-card">
-                    Te ajudo a ter uma alimentação mais saudável, com mudanças de hábitos e fazendo boas escolhas alimentares.
+                    Te ajudo a ter uma reeducação alimentar sem neura, através de mudanças de hábitos e fazendo boas
+                    escolhas alimentares.
+                </h3>
+            </div>
+
+            <div class="card-cir">
+                <img src="Public/saude-mente.png" width="160px" alt="">
+                <h3 class="texto-card">
+                    Te ajudo a cuidar do corpo e mente através da alimentação.
+                </h3>
+            </div>
+
+            <div class="card-cir">
+                <img src="Public/mulher.png" width="160px" alt="">
+                <h3 class="texto-card">
+                    Ajudo mulheres a cuidarem da saúde e bem estar, em todas as fases da vida.
                 </h3>
             </div>
         </div>
-
-        <div id="cards">
-            <div class="card-cir">
-                <img src="Public/saude-mente-circ.svg" width="140px" alt="">
-                <h3 class="texto-card">
-                    Te ajudo a cuidar do corpo e mente através de uma alimentação sem neura.
-                </h3>
-            </div>
-
-            <div class="card-cir">
-                <img src="Public/mulher-circ.svg" width="140px" alt="">
-                 <h3 class="texto-card">
-                    Ajudo mulheres a cuidarem da alimentação e bem estar, em todas as fases da vida. 
-                </h3>
-            </div>
-        </div>  
     </section>
 
+    <section id="consultas">
+        <h1 id="titulo-consultas">Como funcionam os meus atendimentos</h1>
+        <div id="cards-consultas">
+            <div class="info-consultas">
+                <img src="Public/questionario.png" class="img-consultas" width="62px" alt="">
+                <p class="texto-consultas">
+                    Aplico questionário pré-consulta
+                    e no dia da consulta outro questionário
+                    para complementar e conhecer melhor
+                    seus hábitos e rotina.
+                </p>
+            </div>
+
+            <div class="info-consultas">
+                <img src="Public/e-book.png" class="img-consultas" width="72px" alt="">
+                <p class="texto-consultas">
+                    Envio o plano alimentar e e-books
+                    para te ajudar a atingir o seu objetivo
+                    e conquistar autonomia alimentar.
+                </p>
+            </div>
+
+            <div class="info-consultas">
+                <img src="Public/celular.png" class="img-consultas" width="60px" alt="">
+                <p class="texto-consultas">
+                    Estou disponível sempre para tirar
+                    suas dúvidas, explicar e te ajudar
+                    em todo o processo.
+                </p>
+            </div>
+
+            <div class="info-consultas">
+                <img src="Public/refeicao.png" class="img-consultas" width="80px" alt="">
+                <p class="texto-consultas">
+                    As demais consultas iremos adequar
+                    o plano alimentar e garantir para que
+                    você possa criar novos hábitos e que
+                    eles sejam mais saudáveis.
+                </p>
+            </div>
+        </div>
+    </section>
 
 </body>
 

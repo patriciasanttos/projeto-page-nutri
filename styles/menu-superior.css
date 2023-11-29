@@ -1,0 +1,189 @@
+#menu-superior {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    max-width: 1920px;
+}
+
+#menu-superior .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+
+    margin-right: 2%;
+}
+
+#menu-superior li {
+    width: 40%;
+}
+
+#menu-superior a {
+    font-size: 13pt;
+    font-weight: 600;
+    color: black;
+
+}
+
+.link-superior {
+    margin-left: 20px;
+}
+
+.link-superior:hover {
+    opacity: 0.5;
+}
+
+#menu-superior .agendar {
+    background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1);
+    padding: 8px;
+    height: 20px;
+    width: 150px;
+
+    color: #ac3185;
+    font-weight: 700;
+    font-size: 10pt;
+
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+#menu-superior .agendar:hover {
+    transform: scale(1.1)
+}
+
+#links-desktop {
+    padding-right: 50px;
+}
+
+#links-mobile {
+    padding-right: 50px;
+}
+
+/* Dropdown (mobile menu) */
+.dropbtn {
+    background-image: linear-gradient(to right top, #b8daef, #c0d1f5, #d5c5f1);
+    color: #ac3185;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 10pt;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Breakpoints responsivo */
+
+@media only screen and (max-width: 600px) {
+    #links-desktop {
+        display: none;
+    }
+
+    #links-mobile {
+        display: block;
+    }
+
+    #menu-superior {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #links-desktop {
+        display: none;
+    }
+
+    #links-mobile {
+        display: block;
+    }
+
+    #menu-superior {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #links-desktop {
+        display: block;
+    }
+
+    #links-mobile {
+        display: none;
+    }
+
+    #menu-superior {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #links-desktop {
+        display: block;
+    }
+
+    #links-mobile {
+        display: none;
+    }
+
+    #menu-superior {
+        padding: 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #links-desktop {
+        display: block;
+    }
+
+    #links-mobile {
+        display: none;
+    }
+
+    #menu-superior {
+        padding: 0px 10px;
+    }
+}

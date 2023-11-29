@@ -7,22 +7,27 @@
     text-align: center;
     margin-right: 6%;
     margin-left: 6%;
+    margin-top: 80px;
 
     height: 380px;
 
 }
 
 .card-cir {
-    width: 30%;
-    height: 330px;
+    width: 22%;
+    height: 280px;
 
     border-radius: 10px;
     border: 1px solid #ac3185;
     box-shadow: -18px 15px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+.card-cir img {
+    margin-top: -70px;
+}
+
 .texto-card {
-    padding-top: 15px;
+    padding: 15px 5px 10px 5px;
 
     color: #ac3185;
     font-size: 14pt;
@@ -31,6 +36,35 @@
 }
 
 .card-cir:hover {
-    transform:translate(10px);
+    transform:translateY(-10px);
     transition-duration: 0.5s;
+}
+
+@media (max-width: 600px) {
+ .card-cir {
+     flex: 0 0 auto;
+     width: 70%;
+    
+ }
+
+ #cards {
+    gap: 10%;
+    margin-right: 10px;
+    overflow-x: auto;
+ }
+
+ .card-cir img {
+     width: 140px;
+     position: relative;
+     top: 5px;
+ }
+
+ .texto-card {
+     padding-right: 20px;
+ }
+
+ .card-cir:hover {
+    transform:translateY(0px);
+    transition-duration: 0.5s;
+}
 }

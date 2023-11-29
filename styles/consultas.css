@@ -1,0 +1,55 @@
+#consultas {
+    margin: 0px 82px;
+}
+
+#titulo-consultas {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+    font-size: 26pt;
+    font-weight: 600;
+    color: #ac3185;
+}
+
+#cards-consultas {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-bottom: 80px;
+}
+
+.info-consultas {
+    width: 25%;
+    height: 170px;
+    margin: 0px 20px;
+}
+
+.texto-consultas {
+    padding-top: 10px;
+}
+
+.img-consultas {
+    height: 70px;
+}
+
+@media (max-width: 600px) {
+
+    #cards-consultas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-consultas {
+        width: 100%;
+        height: 200px;
+    }
+
+    .texto-consultas {
+        width: 100%;
+    }
+
+}

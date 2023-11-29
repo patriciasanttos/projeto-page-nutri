@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="/Public/Cópia de Logo Patrícia.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/inicio.css">
+    <link rel="stylesheet" href="/styles/imc.css">
+    <link rel="stylesheet" href="/styles/menu-superior.css">
+    <title>Patrícia Santos - Nutricionista</title>
+</head>
+
+<body>
+    <!-- Menu Superior -->
+    <nav id="menu-superior">
+        <img id="logo" src="/Public/logo-alterada.svg" width="180px" height="140px" alt="">
+        <div id="links-desktop">
+            <div class="links">
+                <a href="/index.html" class="link-superior">Início</a>
+                <a href="/pages/sobre.html" class="link-superior">Sobre mim</a>
+                <a href="/pages/imc.html" class="link-superior">IMC</a>
+                <a href="/pages/ebook.html" class="link-superior">E-book</a>
+                <a href="https://api.whatsapp.com/send?phone=5511985209526" class="link-superior agendar" target="_blank">
+                    Agendar consulta
+                </a>
+            </div>
+        </div>
+
+        <div id="links-mobile">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="/index.html">Início</a>
+                    <a href="/pages/sobre.html" >Sobre mim</a>
+                    <a href="/pages/imc.html">IMC</a>
+                    <a href="/pages/ebook.html" >E-book</a>
+                    <a href="https://api.whatsapp.com/send?phone=5511985209526" target="_blank">
+                        Agendar consulta
+                    </a>
+                </div>
+              </div>
+        </div>
+    </nav>
+
+    <section id="div-imc">
+        <h1>Calcule o seu IMC</h1>
+        <h2>Selecione o seu gênero</h2>
+        <div id="generos" class="select">
+            <div class="genero-mf option" id="masculino">
+                <h4>Masculino</h4>
+            </div>
+
+            <div class="genero-mf option" id="feminino">
+                <h4>Feminino</h4>
+            </div>
+        </div>
+
+        <h2>Selecione a sua idade</h2>
+        <div id="idade" class="select">
+            <div class="idade-select option" id="adulto">
+                <h4>Entre 20 e 59 anos de idade</h4>
+            </div>
+
+            <div class="idade-select option" id="idoso">
+                <h4>Idade superior à 60 anos</h4>
+            </div>
+        </div>
+
+        <h2 style="display:none" id="texto-gestante">Está gestante?</h2>
+        <div id="gestante" class="select" style="display:none">
+            <div class="gestante-ou-nao option" id="gestante-ok">
+                <h4>Sim</h4>
+            </div>
+
+            <div class="gestante-ou-nao option" id="nao-gestante">
+                <h4>Não</h4>
+            </div>
+        </div>
+
+        <h2 style="display:none" id="texto-gemelar">Gestação gemelar?</h2>
+        <div id="gestante-gemelar" class="select" style="display:none">
+            <div class="gemelar-ou-nao option" id="gemeos">
+                <h4>Sim</h4>
+            </div>
+        
+            <div class="gemelar-ou-nao option" id="nao-gemeos">
+                <h4>Não</h4>
+            </div>
+        </div>
+
+        <h2>Insira seu peso e altura</h2>
+        <div id="peso-altura" class="select">
+            <div>
+                <h4>Peso</h4>
+                <input type="number" name="" id="peso" placeholder="00.00">
+            </div>
+
+            <div id="peso-pre" style="display:none">
+                <h4>Peso (pré-gestacional)</h4>
+                <input type="number" name="" id="peso-pre-gest" placeholder="00.00">
+            </div>
+
+            <div>
+                <h4>Altura (m)</h4>
+                <input type="number" name="" id="altura" placeholder="0.00">
+            </div>
+        </div>
+
+        <button id="buttonResponder">
+            <h4>Responder</h4>
+        </button>
+
+        <div id="resultado">
+        </div>
+    </section>
+
+    <script src="/scripts/imc.js"></script>
+
+</body>
+
+</html>
