@@ -34,6 +34,10 @@ body {
 /* Breakpoints responsivo */
 
 @media only screen and (max-width: 600px) {
+    #menu-superior {
+        z-index: 1;
+    }
+
     #info-nutri {
         padding: 30px 10px;
     }

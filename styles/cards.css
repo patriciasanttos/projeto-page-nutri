@@ -41,21 +41,16 @@
 }
 
 @media (max-width: 600px) {
- .scrolling {
-     flex-wrap: nowrap;
-     overflow-x: auto;
-
- }
-
  .card-cir {
      flex: 0 0 auto;
      width: 70%;
-
+    
  }
 
  #cards {
     gap: 10%;
     margin-right: 10px;
+    overflow-x: auto;
  }
 
  .card-cir img {
@@ -67,4 +62,9 @@
  .texto-card {
      padding-right: 20px;
  }
+
+ .card-cir:hover {
+    transform:translateY(0px);
+    transition-duration: 0.5s;
+}
 }
