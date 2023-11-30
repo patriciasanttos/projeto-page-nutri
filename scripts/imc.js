@@ -25,15 +25,28 @@ function toggleButtonById(id, isOn) {
   }
 }
 
+function toggleGestante(show) {
+  document.getElementById("texto-gestante").style.display = show ? 'flex' : 'none';
+  document.getElementById("gestante").style.display = show ? 'flex' : 'none';
+
+  if(!show) {
+    document.getElementById("texto-gemelar").style.display = "none";
+    document.getElementById("gestante-gemelar").style.display = "none";
+    document.getElementById("peso-pre").style.display = "none";
+  }
+}
+
 //declarando/criando a função e recebendo um valor
 function setGenero(sexo) {
   genero = sexo;
   if (genero == "m") {
     toggleButtonById("masculino", true);
     toggleButtonById("feminino", false);
+    toggleGestante(false)
   } else {
     toggleButtonById("feminino", true);
     toggleButtonById("masculino", false);
+    toggleGestante(true)
   }
 }
 
@@ -44,15 +57,12 @@ function setIdade(faixaEtaria) {
     toggleButtonById("idoso", false);
 
     if (genero == "f") {
-      document.getElementById("texto-gestante").style.display = "flex";
-      document.getElementById("gestante").style.display = "flex";
+      toggleGestante(true)
     }
   } else {
     toggleButtonById("idoso", true);
     toggleButtonById("adulto", false);
-
-    document.getElementById("texto-gestante").style.display = "none";
-    document.getElementById("gestante").style.display = "none";
+    toggleGestante(false)
   }
 }
 
@@ -277,16 +287,20 @@ function responder() {
     }
   }
 
-  if (
-    pesoPreGest == 0 || gestanteGemelar == null
-  ) {
-    alert("Por favor, verifique os dados preenchidos!");
-  } else if (idade == "adulto") {
-    if (genero == "f" && gestante) {
-      if (!gestanteGemelar) {
-        calculoGestante();
+  if (idade == "adulto") {
+    if (genero == "f") {
+      if (gestante) {
+        if (pesoPreGest == 0 || gestanteGemelar == null) {
+          alert("Por favor, verifique os dados preenchidos!");
+        } else if (gestante) {
+          if (!gestanteGemelar) {
+            calculoGestante();
+          } else {
+            calculoGestanteGemeos();
+          }
+        }
       } else {
-        calculoGestanteGemeos();
+        calculoAdulto();
       }
     } else {
       calculoAdulto();
