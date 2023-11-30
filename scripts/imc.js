@@ -281,14 +281,18 @@ function responder() {
 
   if (idade == "adulto") {
     if (genero == "f") {
-      if (pesoPreGest == 0 || gestanteGemelar == null) {
-        alert("Por favor, verifique os dados preenchidos!");
-      } else if (gestante) {
-        if (!gestanteGemelar) {
-          calculoGestante();
-        } else {
-          calculoGestanteGemeos();
+      if (gestante) {
+        if (pesoPreGest == 0 || gestanteGemelar == null) {
+          alert("Por favor, verifique os dados preenchidos!");
+        } else if (gestante) {
+          if (!gestanteGemelar) {
+            calculoGestante();
+          } else {
+            calculoGestanteGemeos();
+          }
         }
+      } else {
+        calculoAdulto();
       }
     } else {
       calculoAdulto();
