@@ -279,16 +279,16 @@ function responder() {
     }
   }
 
-  if (
-    pesoPreGest == 0 || gestanteGemelar == null
-  ) {
-    alert("Por favor, verifique os dados preenchidos!");
-  } else if (idade == "adulto") {
-    if (genero == "f" && gestante) {
-      if (!gestanteGemelar) {
-        calculoGestante();
-      } else {
-        calculoGestanteGemeos();
+  if (idade == "adulto") {
+    if (genero == "f") {
+      if (pesoPreGest == 0 || gestanteGemelar == null) {
+        alert("Por favor, verifique os dados preenchidos!");
+      } else if (gestante) {
+        if (!gestanteGemelar) {
+          calculoGestante();
+        } else {
+          calculoGestanteGemeos();
+        }
       }
     } else {
       calculoAdulto();
