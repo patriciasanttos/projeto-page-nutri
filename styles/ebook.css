@@ -56,7 +56,7 @@ input {
     transition-duration: 0.5s;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     section {
         display: flex;
         flex-direction: column;
@@ -69,10 +69,78 @@ input {
     }
 
     section h1 {
-        font-size: 20pt;
+        font-size: 18pt;
+        width: 85%;
+
+        margin: auto;
+    }
+
+    section h3 {
+        font-size: 14pt;
+        width: 75%;
+
+        margin: auto;
     }
 
     section input {
         width: 300px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 830px) {
+    section {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 40px;
+    }
+
+    section img {
+        width: 330px;
+    }
+
+    section h1 {
+        font-size: 20pt;
+
+        margin: auto;
+    }
+
+    section h3 {
+        font-size: 15pt;
+
+        margin: auto;
+    }
+
+    section input {
+        width: 320px;
+    }
+}
+
+@media only screen and (min-width: 830px) and (max-width: 992px) {
+    section {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 40px;
+    }
+
+    section img {
+        width: 340px;
+    }
+
+    section h1 {
+        font-size: 24pt;
+
+        margin: auto;
+    }
+
+    section h3 {
+        font-size: 18pt;
+
+        margin: auto;
+    }
+
+    section input {
+        width: 360px;
     }
 }

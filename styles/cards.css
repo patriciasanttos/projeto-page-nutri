@@ -36,35 +36,89 @@
 }
 
 .card-cir:hover {
-    transform:translateY(-10px);
+    transform: translateY(-10px);
     transition-duration: 0.5s;
 }
 
-@media (max-width: 600px) {
- .card-cir {
-     flex: 0 0 auto;
-     width: 70%;
-    
- }
+@media only screen and (max-width: 600px) {
+    .card-cir {
+        flex: 0 0 auto;
+        width: 70%;
 
- #cards {
-    gap: 10%;
-    margin-right: 10px;
-    overflow-x: auto;
- }
+    }
 
- .card-cir img {
-     width: 140px;
-     position: relative;
-     top: 5px;
- }
+    #cards {
+        gap: 10%;
+        overflow-x: auto;
+    }
 
- .texto-card {
-     padding-right: 20px;
- }
+    .card-cir img {
+        width: 140px;
+        position: relative;
+        top: 5px;
+    }
 
- .card-cir:hover {
-    transform:translateY(0px);
-    transition-duration: 0.5s;
+    .texto-card {
+        padding-right: 20px;
+    }
+
+    .card-cir:hover {
+        transform: translateY(0px);
+    }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 800px){
+    .card-cir {
+        flex: 0 0 auto;
+        width: 65%;
+
+    }
+
+    #cards {
+        gap: 10%;
+        overflow-x: auto;
+    }
+
+    .card-cir img {
+        width: 160px;
+        position: relative;
+        top: 10px;
+    }
+
+    .texto-card {
+        padding-right: 20px;
+    }
+
+    .card-cir:hover {
+        transform: translateY(0px);
+    }
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1114px) {
+    .card-cir {
+        flex: 0 0 auto;
+        width: 45%;
+
+    }
+
+    #cards {
+        gap: 10%;
+        overflow-x: auto;
+    }
+
+    .card-cir img {
+        width: 160px;
+        position: relative;
+        top: 10px;
+    }
+
+    .texto-card {
+        padding-right: 20px;
+    }
+
+    .card-cir:hover {
+        transform: translateY(0px);
+    }
+
 }

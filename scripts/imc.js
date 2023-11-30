@@ -149,15 +149,17 @@ function responder() {
   let obesPesoGemMin = 11 - calculo2;
   let obesPesoGemMax = 19 - calculo2;
 
-  //IMC para Adultos
-  function calculoAdulto() {
-    if (
-      genero == null ||
+  function validarCamposVazios() {
+    return genero == null ||
       idade == null ||
       peso == 0 ||
       altura == 0 ||
       altura < 1.45
-    ) {
+  }
+
+  //IMC para Adultos
+  function calculoAdulto() {
+    if (validarCamposVazios()) {
       alert("Por favor, verifique os dados preenchidos!");
     } else if (resultado < 18.5) {
       document.getElementById(
@@ -199,11 +201,7 @@ function responder() {
   //IMC para Idosos
   function calculoIdoso() {
     if (
-      genero == null ||
-      idade == null ||
-      peso == 0 ||
-      altura == 0 ||
-      altura < 1.45
+     validarCamposVazios()
     ) {
       alert("Por favor, verifique os dados preenchidos!");
     } else if (resultado < 23) {
