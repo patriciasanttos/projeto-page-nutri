@@ -26,10 +26,12 @@ function toggleButtonById(id, isOn) {
 }
 
 function toggleGestante(show) {
-  document.getElementById("texto-gestante").style.display = show ? 'flex' : 'none';
-  document.getElementById("gestante").style.display = show ? 'flex' : 'none';
+  document.getElementById("texto-gestante").style.display = show
+    ? "flex"
+    : "none";
+  document.getElementById("gestante").style.display = show ? "flex" : "none";
 
-  if(!show) {
+  if (!show) {
     document.getElementById("texto-gemelar").style.display = "none";
     document.getElementById("gestante-gemelar").style.display = "none";
     document.getElementById("peso-pre").style.display = "none";
@@ -42,11 +44,11 @@ function setGenero(sexo) {
   if (genero == "m") {
     toggleButtonById("masculino", true);
     toggleButtonById("feminino", false);
-    toggleGestante(false)
+    toggleGestante(false);
   } else {
     toggleButtonById("feminino", true);
     toggleButtonById("masculino", false);
-    toggleGestante(true)
+    toggleGestante(true);
   }
 }
 
@@ -57,12 +59,12 @@ function setIdade(faixaEtaria) {
     toggleButtonById("idoso", false);
 
     if (genero == "f") {
-      toggleGestante(true)
+      toggleGestante(true);
     }
   } else {
     toggleButtonById("idoso", true);
     toggleButtonById("adulto", false);
-    toggleGestante(false)
+    toggleGestante(false);
   }
 }
 
@@ -130,31 +132,34 @@ function responder() {
   let resultado = calculo1.toFixed(2);
 
   let pesoPreGest = document.getElementById("peso-pre-gest").value;
-  let calculo2 = peso - pesoPreGest;
-  let resultado2 = pesoPreGest / altura / altura;
+  let calculoPre = peso - pesoPreGest;
+  let calculo2 = pesoPreGest / altura / altura;
+  let resultado2 = calculo2.toFixed(2);
 
-  let baixoPesoGestMin = 12.5 - calculo2;
-  let baixoPesoGestMax = 18 - calculo2;
-  let eutrofPesoGestMin = 11.5 - calculo2;
-  let eutrofPesoGestMax = 16 - calculo2;
-  let sobrePesoGestMin = 7 - calculo2;
-  let sobrePesoGestMax = 11.5 - calculo2;
-  let obesPesoGestMin = 5 - calculo2;
-  let obesPesoGestMax = 9 - calculo2;
+  let baixoPesoGestMin = 12.5 - calculoPre;
+  let baixoPesoGestMax = 18 - calculoPre;
+  let eutrofPesoGestMin = 11.5 - calculoPre;
+  let eutrofPesoGestMax = 16 - calculoPre;
+  let sobrePesoGestMin = 7 - calculoPre;
+  let sobrePesoGestMax = 11.5 - calculoPre;
+  let obesPesoGestMin = 5 - calculoPre;
+  let obesPesoGestMax = 9 - calculoPre;
 
-  let eutrofPesoGemMin = 17 - calculo2;
-  let eutrofPesoGemMax = 25 - calculo2;
-  let sobrePesoGemMin = 14 - calculo2;
-  let sobrePesoGemMax = 23 - calculo2;
-  let obesPesoGemMin = 11 - calculo2;
-  let obesPesoGemMax = 19 - calculo2;
+  let eutrofPesoGemMin = 17 - calculoPre;
+  let eutrofPesoGemMax = 25 - calculoPre;
+  let sobrePesoGemMin = 14 - calculoPre;
+  let sobrePesoGemMax = 23 - calculoPre;
+  let obesPesoGemMin = 11 - calculoPre;
+  let obesPesoGemMax = 19 - calculoPre;
 
   function validarCamposVazios() {
-    return genero == null ||
+    return (
+      genero == null ||
       idade == null ||
       peso == 0 ||
       altura == 0 ||
       altura < 1.45
+    );
   }
 
   //IMC para Adultos
@@ -200,26 +205,28 @@ function responder() {
 
   //IMC para Idosos
   function calculoIdoso() {
-    if (
-     validarCamposVazios()
-    ) {
+    if (validarCamposVazios()) {
       alert("Por favor, verifique os dados preenchidos!");
     } else if (resultado < 23) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Desnutrido (a). Atenção! É preciso cuidar da alimentação.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Desnutrido (a). Atenção! É preciso cuidar da alimentação.`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
     } else if (resultado >= 23 && resultado < 28) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Eutrófico (a). Você está num bom caminho! Continue cuidando da sua alimentação.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Eutrófico (a). Você está num bom caminho! Continue cuidando da sua alimentação.`;
       document.getElementById("resultado").style.border = styleEutrofico;
     } else if (resultado >= 28 && resultado < 30) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Sobrepeso. Atenção! Você pode fazer uma reeducação alimentar.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Sobrepeso. Atenção! Você pode fazer uma reeducação alimentar.`;
       document.getElementById("resultado").style.border = styleSobrePeso;
     } else if (resultado >= 30) {
-      document.getElementById("resultado").innerHTML =
-        "O seu estado nutricional deu: Obesidade. Atenção! Você pode fazer uma reeducação alimentar.";
+      document.getElementById(
+        "resultado"
+      ).innerHTML = `O cálculo do seu IMC foi de: ${resultado}kg/m². O seu estado nutricional é: Obesidade. Atenção! Você pode fazer uma reeducação alimentar.`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
     }
@@ -237,26 +244,26 @@ function responder() {
     } else if (resultado2 < 18.5) {
       document.getElementById(
         "resultado"
-      ).innerHTML = `Seu peso pré-gestacional teve um IMC de baixo peso, você pode ganhar 
+      ).innerHTML = `O cálculo do seu IMC pré-gestacional foi de: ${resultado2}kg/m². Seu estado nutricional pré-gestacional foi: Desnutrido. Você pode ganhar 
         entre ${baixoPesoGestMin}kg à ${baixoPesoGestMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas.`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
     } else if (resultado2 >= 18.5 && resultado2 < 25) {
       document.getElementById(
         "resultado"
-      ).innerHTML = `Seu peso pré-gestacional teve um IMC eutrófico, você pode ganhar 
+      ).innerHTML = `O cálculo do seu IMC pré-gestacional foi de: ${resultado2}kg/m². Seu estado nutricional pré-gestacional foi: Eutrófico. Você pode ganhar 
         entre ${eutrofPesoGestMin}kg à ${eutrofPesoGestMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas.`;
       document.getElementById("resultado").style.border = styleEutrofico;
     } else if (resultado2 >= 25 && resultado2 < 30) {
       document.getElementById(
         "resultado"
-      ).innerHTML = `Seu peso pré-gestacional teve um IMC de sobrepeso, você pode ganhar 
+      ).innerHTML = `O cálculo do seu IMC pré-gestacional foi de: ${resultado2}kg/m². Seu estado nutricional pré-gestacional foi: Sobrepeso. Você pode ganhar 
         entre ${sobrePesoGestMin}kg à ${sobrePesoGestMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas.`;
       document.getElementById("resultado").style.border = styleSobrePeso;
     } else if (resultado2 >= 30) {
       document.getElementById(
         "resultado"
-      ).innerHTML = `Seu peso pré-gestacional teve um IMC de obesidade, você pode ganhar 
+      ).innerHTML = `O cálculo do seu IMC pré-gestacional foi de: ${resultado2}kg/m². Seu estado nutricional pré-gestacional foi: Obesidade. Você pode ganhar 
         entre ${obesPesoGestMin}kg à ${obesPesoGestMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas.`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
@@ -268,19 +275,19 @@ function responder() {
     if (resultado2 >= 18.5 && resultado2 < 25) {
       document.getElementById(
         "resultado"
-      ).innerHTML = `Seu peso pré-gestacional teve um IMC eutrófico, você pode ganhar 
+      ).innerHTML = `O cálculo do seu IMC pré-gestacional foi de: ${resultado2}kg/m². Seu estado nutricional pré-gestacional foi: Eutrófico. Você pode ganhar 
         entre ${eutrofPesoGemMin}kg à ${eutrofPesoGemMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas.`;
       document.getElementById("resultado").style.border = styleEutrofico;
     } else if (resultado2 >= 25 && resultado2 < 30) {
       document.getElementById(
         "resultado"
-      ).innerHTML = `Seu peso pré-gestacional teve um IMC de spbrepeso, você pode ganhar 
+      ).innerHTML = `O cálculo do seu IMC pré-gestacional foi de: ${resultado2}kg/m². Seu estado nutricional pré-gestacional foi: Sobrepeso. Você pode ganhar 
         entre ${sobrePesoGemMin}kg à ${sobrePesoGemMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas`;
       document.getElementById("resultado").style.border = styleSobrePeso;
     } else if (resultado2 >= 30) {
       document.getElementById(
         "resultado"
-      ).innerHTML = `Seu peso pré-gestacional teve um IMC de obesidade, você pode ganhar 
+      ).innerHTML = `O cálculo do seu IMC pré-gestacional foi de: ${resultado2}kg/m². Seu estado nutricional pré-gestacional foi: Obesidade. Você pode ganhar 
         entre ${obesPesoGemMin}kg à ${obesPesoGemMax}kg. Para informações mais detalhadas, podemos agendar uma consulta e esclarecer as dúvidas`;
       document.getElementById("resultado").style.border =
         styleBaixoPesoObesidade;
