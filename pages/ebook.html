@@ -18,9 +18,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://patriciasantos-nutricionista.netlify.app/">
     <meta property="og:title" content="Nutricionista - Patricia Santos">
-    <meta property="og:description" content="Quer mudar os seus hábitos alimentares, mas não sabe como? Eu posso te ajudar!">
-    <meta property="og:image" itemprop="image" content="https://raw.githubusercontent.com/patriciasanttos/projeto-page-nutri/main/Public/C%C3%B3pia%20de%20Logo%20Patr%C3%ADcia.png">
-    
+    <meta property="og:description"
+        content="Quer mudar os seus hábitos alimentares, mas não sabe como? Eu posso te ajudar!">
+    <meta property="og:image" itemprop="image"
+        content="https://raw.githubusercontent.com/patriciasanttos/projeto-page-nutri/main/Public/C%C3%B3pia%20de%20Logo%20Patr%C3%ADcia.png">
+
     <title>Patrícia Santos - Nutricionista</title>
 </head>
 
@@ -36,7 +38,8 @@
                 <a href="/pages/sobre.html" class="link-superior">Sobre mim</a>
                 <a href="/pages/imc.html" class="link-superior">IMC</a>
                 <a href="/pages/ebook.html" class="link-superior">E-book</a>
-                <a href="https://api.whatsapp.com/send?phone=5511985209526" class="link-superior agendar" target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=5511985209526" class="link-superior agendar"
+                    target="_blank">
                     Agendar consulta
                 </a>
             </div>
@@ -47,14 +50,14 @@
                 <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
                     <a href="/index.html">Início</a>
-                    <a href="/pages/sobre.html" >Sobre mim</a>
+                    <a href="/pages/sobre.html">Sobre mim</a>
                     <a href="/pages/imc.html">IMC</a>
-                    <a href="/pages/ebook.html" >E-book</a>
+                    <a href="/pages/ebook.html">E-book</a>
                     <a href="https://api.whatsapp.com/send?phone=5511985209526" target="_blank">
                         Agendar consulta
                     </a>
                 </div>
-              </div>
+            </div>
         </div>
     </nav>
 
@@ -69,9 +72,16 @@
             <form action="https://api.sheetmonkey.io/form/puGXkPeqafc69gJY4RVKJW" method="post">
                 <input type="text" placeholder="Nome" name="Name" required /> <br><br>
                 <input type="email" placeholder="Email" name="Email" required /> <br><br>
-                <input id="telNo" placeholder="Telefone" name="telNo" type="tel" size="20" minlength="9" maxlength="11" required> <br> <br>
+                <input id="telNo" placeholder="Telefone" name="telNo" type="tel" required> <br> <br>
                 <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
                 <button id="button-form" type="submit"> Quero o meu ebook</button>
             </form>
         </div>
     </section>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="/scripts/ebook.js"></script>
+
+</body>
+
+</html>

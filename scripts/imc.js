@@ -318,3 +318,10 @@ function responder() {
 }
 
 document.getElementById("buttonResponder").addEventListener("click", responder);
+
+// Mask inputs
+IMask(document.getElementById('peso'), { mask: '00.00' });
+IMask(document.getElementById('peso-pre-gest'), { mask: '00.00' });
+IMask(document.getElementById('altura'), { mask: '0.00' });
+
+
