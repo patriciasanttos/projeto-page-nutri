@@ -158,7 +158,8 @@ function responder() {
       idade == null ||
       peso == 0 ||
       altura == 0 ||
-      altura < 1.45
+      altura < 1.45 || altura >= 2.20
+    
     );
   }
 
@@ -320,7 +321,7 @@ function responder() {
 document.getElementById("buttonResponder").addEventListener("click", responder);
 
 // Mask inputs
-IMask(document.getElementById('peso'), { mask: '00.00' });
+IMask(document.getElementById('peso'), { mask: '00.00'});
 IMask(document.getElementById('peso-pre-gest'), { mask: '00.00' });
 IMask(document.getElementById('altura'), { mask: '0.00' });
 
