@@ -5,6 +5,13 @@ body {
     width: 100%;
 }
 
+#contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: fixed;
+}
 
 #info-nutri {
     background-image: linear-gradient(to right, #f6ebf0, #f4ecf5, #f0eefa, #eaf1fe, #e4f4ff);
