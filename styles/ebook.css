@@ -16,6 +16,15 @@ section img {
     box-shadow: 31px 31px 14px -9px rgba(0, 0, 0, 0.1);
 }
 
+
+#ebooks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8%;
+
+}
+
 #title-form {
     text-align: center;
     margin-top: 35px;
@@ -65,7 +74,21 @@ input {
     }
 
     section img {
-        width: 320px;
+        width: 280px;
+    }
+
+    .ebook-scroll {
+        flex: 0 0 auto;
+    }
+
+    #ebooks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 90%;
+
+        gap: 8%;
+        overflow-x: auto;
     }
 
     section h1 {
@@ -99,6 +122,20 @@ input {
         width: 330px;
     }
 
+    .ebook-scroll {
+        flex: 0 0 auto;
+    }
+
+    #ebooks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 80%;
+
+        gap: 8%;
+        overflow-x: auto;
+    }
+
     section h1 {
         font-size: 20pt;
 
@@ -125,7 +162,7 @@ input {
     }
 
     section img {
-        width: 340px;
+        width: 300px;
     }
 
     section h1 {
@@ -142,5 +179,21 @@ input {
 
     section input {
         width: 360px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1340px) {
+    .ebook-scroll {
+        flex: 0 0 auto;
+    }
+
+    #ebooks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 40%;
+
+        gap: 8%;
+        overflow-x: auto;
     }
 }
